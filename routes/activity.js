@@ -15,19 +15,11 @@ exports.edit = function (req, res) {
 
 exports.execute = async function (req, res) {
     try {
-
-        const inArguments = req.body.inArguments[0];
-        const contactKey = "REWARDSAPITEST01";
-        const data = retrieveData()
-
-        const token = await retrieveToken();
-        const response = await triggerJourney(token, contactKey, data);
-        
-        res.status(200).send('Execute');
+        send('Execute');
     } catch (error) {
         console.error('Error executing journey:', error);
 
-        res.status(200).send('Execute'); // Ensure the journey continues
+        send('Execute'); // Ensure the journey continues
     }
 };
 
