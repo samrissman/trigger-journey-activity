@@ -15,7 +15,7 @@ exports.index = function(req, res) {
 	} else {
 		res.render("index", {
 			title: "Journey Builder Activity",
-			results: activity.logExecuteData
+			results: "Rewards Push Journey"
 		});
 	}
 };
